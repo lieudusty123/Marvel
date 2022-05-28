@@ -1,19 +1,14 @@
-// k_l3d74wg3
-// k_6lqq4u53
 
-localStorage.clear();
-
-// var browser = browser || chrome
 const movieUl = document.querySelector('#movieTimelineUl')
 const movieTimelineImg = document.querySelectorAll('.timelineImg')
 
 const sendGetRequest = async () => {
     try {
         for (let index = 1; index <= 2; index++) {
-            let res = await axios.get(`http://www.omdbapi.com/?i=tt2015381&apikey=15f5244a`)
+            let res = await axios.get(`http://www.omdbapi.com/?i=tt2015381&apikey=${localStorage.getItem('APIKey')}`)
             let data = await res.data
             if (index > 1) {
-                res = await axios.get(`http://www.omdbapi.com/?i=tt3896198&apikey=15f5244a`)
+                res = await axios.get(`http://www.omdbapi.com/?i=tt3896198&apikey=${localStorage.getItem('APIKey')}`)
                 data = await res.data
             }
 
@@ -70,4 +65,3 @@ movieUl.addEventListener('click', (e) => {
 
 })
 
-// export default passedData;

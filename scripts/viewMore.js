@@ -4,7 +4,7 @@ const trailerSource = document.querySelector('#posterSource')
 const sendGetRequest = async () => {
     try {
         // fetching data
-        let res = await axios.get(`http://www.omdbapi.com/?i=${localStorage.getItem('movie')}&apikey=15f5244a`)
+        let res = await axios.get(`http://www.omdbapi.com/?i=${localStorage.getItem('movie')}&apikey=${localStorage.getItem('APIKey')}`)
         let data = await res.data
         console.log(data)
 
@@ -19,7 +19,7 @@ const sendGetRequest = async () => {
         trailerSource.src = `${data.Poster}`
     }
     catch (e) {
-        console.log(e, "lksdl;askd;l")
+        console.log(e, "<--- Yikes")
     }
 
 }
