@@ -1,0 +1,46 @@
+body {
+    color: white;
+}
+
+main {
+    background-color: rgb(15, 15, 15);
+    width: 900px;
+    height: 500px;
+    top: 30%;
+    left: 26.5%;
+    position: absolute;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    #{&}section {
+        width: 30%;
+    }
+
+    #posterSource {
+        height: 500px;
+    }
+
+    .desc {
+        width: 50%;
+        padding-top: 2rem;
+        margin-right: 4rem;
+        height: 100%;
+        font-size: 1.2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .details {
+        padding-bottom: 1rem;
+
+
+    }
+
+    .details b {
+        color: rgb(237, 29, 36);
+    }
+}
